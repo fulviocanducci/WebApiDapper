@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Dapper.Contrib.Extensions;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using WebApiDapper.Models;
@@ -14,7 +15,7 @@ namespace WebApiDapper.Controllers
 
         public TodosController(TodoRepositoryAbstract todoRepositoryAbstract)
         {
-            TodoRepository = todoRepositoryAbstract;
+            TodoRepository = todoRepositoryAbstract;            
         }
 
         [HttpGet]
